@@ -1,3 +1,4 @@
+import { DashboardPage } from './../dashboard/dashboard';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
@@ -35,6 +36,8 @@ export class RegisterPage {
     });
     toast.present();
     // TOAST END
+
+    this.navCtrl.push(DashboardPage);   
   }
 
 }

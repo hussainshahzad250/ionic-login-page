@@ -19,7 +19,7 @@ export class HomePage {
   password: string;
 
 
-  data: Observable<any>;
+  data?: any;
 
   constructor(public navCtrl: NavController,public toastCtrl: ToastController,public http: HttpClient) {
 
@@ -35,13 +35,12 @@ export class HomePage {
     });
     toast.present();
     // TOAST END
+    
    this.data= this.http.get('https://jsonplaceholder.typicode.com/users');
     this.data.subscribe(data=>{
       this.data =data;
-      console.log(this.data);
-      
-    })
-    this.navCtrl.push(DashboardPage);
+      this.navCtrl.push(DashboardPage,{users:this.data});     
+    });    
   }
 
   goToRegister(){

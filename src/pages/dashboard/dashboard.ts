@@ -15,7 +15,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class DashboardPage {
 
+  users: any;
+  userList?: any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.users= navParams.get('users');
+    this.userList = this.users;
   }
 
   ionViewDidLoad() {
