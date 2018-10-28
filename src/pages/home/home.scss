@@ -4,4 +4,19 @@ page-home {
         margin-top: 20vh;
         margin-bottom: 5vh; 
     }
+    // ion-content{
+    //     // background-image: image('https://via.placeholder.com/600/24f355')
+    //     background: #904790 !important;
+    // }
+    .bg-image{
+        // background: transparent !important;
+        background-image: url('../../assets/imgs/3.jpg');
+        // background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+    }
+    .table{
+        background: transparent !important;  
+    }
 }

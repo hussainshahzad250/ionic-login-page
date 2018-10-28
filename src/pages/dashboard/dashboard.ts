@@ -53,12 +53,12 @@ export class DashboardPage {
   }
 
   slideChange(){
-    let toast = this.toastCtrl.create({
-      message: 'Slide Changed !',
-      duration: 1000
-      // position: 'top'
-    });
-    toast.present();
+    // let toast = this.toastCtrl.create({
+    //   message: 'Slide Changed !',
+    //   duration: 1000
+    //   // position: 'top'
+    // });
+    // toast.present();
   }
 
 }
