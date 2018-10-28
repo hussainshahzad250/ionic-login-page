@@ -28,6 +28,7 @@ export class RegisterPage {
 
   register() {
     console.log("username " + this.username+" email " + this.email +" & mobile "+ this.mobile);
+
     // TOAST START
     let toast = this.toastCtrl.create({
       message: 'Register successfully !',
@@ -36,8 +37,6 @@ export class RegisterPage {
     });
     toast.present();
     // TOAST END
-
     this.navCtrl.push(DashboardPage);   
   }
-
 }

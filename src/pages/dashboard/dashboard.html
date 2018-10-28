@@ -6,7 +6,23 @@
     <p>{{user.email}}</p>
     <p>{{user.Gwenborough}}</p>
     <button ion-button clear item-end >View</button>
+  </ion-item>  
+  <ion-item *ngFor="let slide of slider">     
+    <h1 [innerHTML]="slide.title"></h1>
+    <img [src]="slide.image"/>
+    <h1 [innerHTML]="slide.description"></h1>
   </ion-item>
-  
 </ion-list>
+<ion-slides pager="true" (ionSlideDidChange)="slideChange()">
+  <ion-slide *ngFor="let slide of slider">
+      <!-- <ion-toolbar>
+        <ion-buttons end>
+            <button ion-button color="secondary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar> -->
+      <h1 [innerHTML]="slide.title"></h1>
+      <img [src]="slide.image" class="img"/>
+      <h1 [innerHTML]="slide.description"></h1>
+  </ion-slide>
+</ion-slides>
 </ion-content>

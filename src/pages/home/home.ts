@@ -15,7 +15,7 @@ import { Injectable } from '@angular/core';
 })
 export class HomePage {
 
-  username: string;
+  user: string;
   password: string;
 
 
@@ -26,8 +26,7 @@ export class HomePage {
   }
 
   login(){
-    console.log("Username " + this.username + " Password " + this.password);
-     // TOAST START
+        // TOAST START
      let toast = this.toastCtrl.create({
       message: 'Login successfully !',
       duration: 3000,
